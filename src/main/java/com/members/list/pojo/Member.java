@@ -18,13 +18,13 @@ public class Member {
     @JsonFormat(shape= JsonFormat.Shape.STRING, pattern="dd-MM-yyyy")
     private Date dateOfBirth;
     private Integer postalCode;
-    private Base64 picture;
+    private String picture;
 
 
     public Member() {
     }
 
-    public Member(String _id, String firstName, String lastName, Date dateOfBirth, Integer postalCode, Base64 picture) {
+    public Member(String _id, String firstName, String lastName, Date dateOfBirth, Integer postalCode, String picture) {
         this._id = _id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -73,11 +73,11 @@ public class Member {
         this.postalCode = postalCode;
     }
 
-    public Base64 getPicture() {
+    public String getPicture() {
         return picture;
     }
 
-    public void setPicture(Base64 picture) {
+    public void setPicture(String picture) {
         this.picture = picture;
     }
 
