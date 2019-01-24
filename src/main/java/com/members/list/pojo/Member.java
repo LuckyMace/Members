@@ -1,9 +1,10 @@
 package com.members.list.pojo;
 
-import org.bson.types.ObjectId;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.Base64;
 import java.util.Date;
 
 @Document(collection = "Member")
@@ -14,15 +15,16 @@ public class Member {
 
     private String firstName;
     private String lastName;
+    @JsonFormat(shape= JsonFormat.Shape.STRING, pattern="dd-MM-yyyy")
     private Date dateOfBirth;
     private Integer postalCode;
-    private String picture;
+    private Base64 picture;
 
 
     public Member() {
     }
 
-    public Member(String _id, String firstName, String lastName, Date dateOfBirth, Integer postalCode, String picture) {
+    public Member(String _id, String firstName, String lastName, Date dateOfBirth, Integer postalCode, Base64 picture) {
         this._id = _id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -71,11 +73,11 @@ public class Member {
         this.postalCode = postalCode;
     }
 
-    public String getPicture() {
+    public Base64 getPicture() {
         return picture;
     }
 
-    public void setPicture(String picture) {
+    public void setPicture(Base64 picture) {
         this.picture = picture;
     }
 
