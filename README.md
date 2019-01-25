@@ -38,6 +38,6 @@ Spring Security
 2) Integration tests for testing security.
 
 * MongoDB running locally. It could be added like another container to Docker. But sometimes it's not best practice.
-
+* Only entity object exists. For web apps it will be good to have entity and it's dto object for working with UI part.
 
 
