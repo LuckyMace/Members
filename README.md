@@ -24,7 +24,7 @@ Command '--network="host"' for possible connection from docker outside with the 
 Spring Security
 * App uses inMemoryAuthentication with Basic Auth user: username=test_user, password=qwerty123, role=ROLE_USER
 
-- Possible improvements -
+#Possible improvements
 * Picture is saved like a simple base64 String. There are different ways how to save picture: 
 1) It could be link to file, which saved locally;
 2) It could be link to file, which saved in some data storage (getting by api);
