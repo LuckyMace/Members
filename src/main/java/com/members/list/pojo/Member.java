@@ -4,7 +4,6 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.util.Base64;
 import java.util.Date;
 
 @Document(collection = "Member")
@@ -24,8 +23,7 @@ public class Member {
     public Member() {
     }
 
-    public Member(String _id, String firstName, String lastName, Date dateOfBirth, Integer postalCode, String picture) {
-        this._id = _id;
+    public Member(String firstName, String lastName, Date dateOfBirth, Integer postalCode, String picture) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.dateOfBirth = dateOfBirth;
@@ -84,7 +82,7 @@ public class Member {
     @Override
     public String toString() {
         return String.format(
-                "Member[_id=%s, firstName='%s', lastName='%s', dateOfBirth='%s', postalCode='%s', picture='%s']",
-                _id, firstName, lastName, dateOfBirth, postalCode, picture);
+                "Member[_id=%s, firstName='%s', lastName='%s', dateOfBirth='%s', postalCode='%s']",
+                _id, firstName, lastName, dateOfBirth, postalCode);
     }
 }
