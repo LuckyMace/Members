@@ -21,7 +21,7 @@ public class CustomMongoConfig extends AbstractMongoConfiguration {
             String uri = System.getenv("mongo_uri").substring(0, System.getenv("mongo_uri").lastIndexOf("/"));
             return new MongoClient(new MongoClientURI(uri));
         } else {
-            return new MongoClient(defaultMongoUri);
+            return new MongoClient(new MongoClientURI(defaultMongoUri));
         }
 
     }
