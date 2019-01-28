@@ -1,7 +1,7 @@
 # Members
 CRUD rest application for working with Members. Application has no UI, only REST API for requests.
 
-Technologies: Spring Boot, MVC, Security, MongoDB, Docker, Swagger
+Technologies: Spring Boot, MVC, Security, MongoDB, Docker, Swagger, Maven
 
 Member entity:
 - Id
