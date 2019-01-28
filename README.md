@@ -15,8 +15,8 @@ Swagger
 * Use /swagger-ui.html to get REST API info.
 
 Docker
-* Use "docker build -t members ." command for building app, based on Dockerfile
-* Use "docker run --env mongo_uri=mongodb://localhost:27017/TestDB --network="host" members" command to run app, 
+* Use "docker build -t members ." command for building app image, based on Dockerfile
+* Use "docker run --env mongo_uri=mongodb://localhost:27017/TestDB --network="host" members" command to run app container, 
 with environment variable for connection to mongo db. Use your host, port and db name. 
 Default value of uri (if it will be no 'mongo_uri' env variable when app starts) - "mongodb://localhost:27017/TestDB".
 Command '--network="host"' for possible connection from docker outside with the mongodb.
