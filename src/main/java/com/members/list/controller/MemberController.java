@@ -1,9 +1,7 @@
 package com.members.list.controller;
 
 import com.members.list.dto.MemberDTO;
-import com.members.list.pojo.Member;
 import com.members.list.service.MemberService;
-import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.http.HttpStatus;

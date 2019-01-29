@@ -1,7 +1,7 @@
 package com.members.list.service;
 
 import com.members.list.dto.MemberDTO;
-import com.members.list.pojo.Member;
+import com.members.list.entity.Member;
 import com.members.list.repository.MemberRepository;
 import com.mongodb.BasicDBObject;
 import com.mongodb.DBObject;
