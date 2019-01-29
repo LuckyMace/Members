@@ -1,33 +1,34 @@
-package com.members.list.pojo;
+package com.members.list.dto;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.util.Date;
 
-@Document(collection = "Member")
-public class Member {
+public class MemberDTO {
 
-    @Id
     private String _id;
 
     private String firstName;
     private String lastName;
+    @JsonFormat(shape= JsonFormat.Shape.STRING, pattern="dd-MM-yyyy")
     private Date dateOfBirth;
     private Integer postalCode;
-    private String pictureId;
+    private String pictureLink;
 
+    public MemberDTO() {
 
-    public Member() {
     }
 
-    public Member(String firstName, String lastName, Date dateOfBirth, Integer postalCode, String pictureId) {
+    public MemberDTO(String _id, String firstName, String lastName, Date dateOfBirth, Integer postalCode, String pictureLink) {
+        this._id = _id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.dateOfBirth = dateOfBirth;
         this.postalCode = postalCode;
-        this.pictureId = pictureId;
+        this.pictureLink = pictureLink;
     }
+
+
 
     public String get_id() {
         return _id;
@@ -69,17 +70,11 @@ public class Member {
         this.postalCode = postalCode;
     }
 
-    public String getPictureId() {
-        return pictureId;
-    }
-    public void setPictureId(String pictureId) {
-        this.pictureId = pictureId;
+    public String getPictureLink() {
+        return pictureLink;
     }
 
-    @Override
-    public String toString() {
-        return String.format(
-                "Member[_id=%s, firstName='%s', lastName='%s', dateOfBirth='%s', postalCode='%s']",
-                _id, firstName, lastName, dateOfBirth, postalCode);
+    public void setPictureLink(String pictureLink) {
+        this.pictureLink = pictureLink;
     }
 }
