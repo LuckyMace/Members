@@ -22,11 +22,10 @@ Command '--network="host"' for possible connection from docker outside with the 
 
 Spring Security
 * App uses inMemoryAuthentication with Basic Auth user: username=test_user, password=qwerty123, role=ROLE_USER
+* Use SpringSecurityTest class for testing basic user authentification
 
 #Possible improvements
-* There are no tests in app. There should be added:
-1) JUnit\Mockito unit testing for basic methods;
-2) Integration tests for testing security.
+* There are no tests in app. There should be added JUnit\Mockito unit testing for basic methods;
 
 * MongoDB running locally. It could be added like another container to Docker. But sometimes it's not best practice.
 
