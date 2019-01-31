@@ -25,7 +25,7 @@ Spring Security
 * Use SpringSecurityTest class for testing basic user authentification
 
 #Possible improvements
-* There are no tests in app. There should be added JUnit\Mockito unit testing for basic methods;
+* There could be added JUnit\Mockito unit testing for basic methods;
 
 * MongoDB running locally. It could be added like another container to Docker. But sometimes it's not best practice.
 
